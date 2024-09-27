@@ -28,7 +28,7 @@ def display_man(wrong_guess):
 def display_hint(hint):
     print(" ".join(hint))
 def display_answer(answer):
-    pass
+    print(" ".join(answer))
 def main():
     answer=random.choice(words)
     hint=["_"]*len(answer)
@@ -54,7 +54,7 @@ def main():
                 if answer[i]==guess:
                     hint[i]=guess
         else:
-            wrong_guesses+=1
+            wrong_guess+=1
         if "_" not in hint:
             display_man(wrong_guess)
             display_answer(answer)
